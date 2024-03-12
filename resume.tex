@@ -1,0 +1,55 @@
+%==========================================================================
+\documentclass[a4paper, 11pt, openany, twocolumn]{ltjsarticle} % ltjsbook,ltjsreport もある 
+\usepackage{cite}
+\usepackage[no-math]{fontspec}         % font を設定できるようにする
+\usepackage{luatexja, luatexja-ruby}   %日本語lualatex必須
+% \usepackage[hiragino-pron, jis2004, deluxe]{luatexja-preset} % fontの指定
+\usepackage{bm, ascmac, enumerate}
+\usepackage{graphicx}
+%==========================================================================
+% baselinestretch は行間のスペースです. 
+\renewcommand{\baselinestretch}{0.9}
+
+\setlength{\columnsep}{2\zw}
+\pagestyle{empty}
+%-------------------------------------------------------------------------
+\makeatletter
+\def\abstract#1{\long\def\@abstract{#1}}
+\def\@abstract{}
+
+\let\@oldmaketitle=\@maketitle
+\def\@maketitle{
+	\@oldmaketitle
+	% \begin{center}\large\bf Abstract\end{center}
+	\begin{quotation}\@abstract\end{quotation}
+	\vskip 1.5em}
+\makeatother
+%-------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------
+
+\title{\protect \Large \bf}
+\author{\bf \\ \bf}
+\date{}
+
+\abstract{}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\section{目的}
+
+
+\section{原理}
+
+\section{実験方法}
+
+\section{実験結果}
+
+\section{結論}
+
+\section*{参考文献}
+
+\end{document}
+
